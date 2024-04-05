@@ -1,26 +1,14 @@
 package main;
 
+import models.Menu;
 import models.Product;
 import models.Food;
 import models.Electronic;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+
 import java.util.Scanner;
 
 public class Main {
-	public static void menu() {
-		// Método para exibir o menu principal
-        // Lista as opções disponíveis para o usuário
-		System.out.println("1 - Criar novo produto");
-		System.out.println("2 - Criar novo eletrônico");
-		System.out.println("3 - Criar comida");
-		System.out.println("4 - Ler produto");
-		System.out.println("9 - Sair");
-	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -34,9 +22,11 @@ public class Main {
 		boolean main = true;
 		
 		do {
-		menu();
+		Menu.menu();
 		
-		int option = sc.nextInt();
+		int option;
+		
+			option = sc.nextInt();
 		
 			switch(option) {
 			
@@ -60,6 +50,9 @@ public class Main {
 				System.out.println("OBRIGADO POR USAR MEU SISTEMA!!");
 				main = false;
 				break;
+			}
+			default:{
+				System.err.println("Digito inválido");
 			}
 				
 		

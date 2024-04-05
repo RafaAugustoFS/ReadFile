@@ -69,7 +69,7 @@ public class Electronic extends Product {
      System.out.println("Qual a marca do produto?");
      setElectronicBrand(sc.next());
      
-     System.out.println("Qual a marca do produto?");
+     System.out.println("Qual o modelo do produto?");
      setElectronicModel(sc.next());
          
       super.Save();
